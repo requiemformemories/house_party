@@ -3,11 +3,15 @@ using System.Collections;
 
 public class frog_ArrowCtrl : MonoBehaviour {
 
-    
+    public bool isShootable = false;
     bool isDown;
+    bool isStand;
     int energy;
     int skill;
     int dmg;
+    public UISprite A_Soul;
+    public UISprite Arrow;
+    public UI2DSpriteAnimation A_Shoot;
 
 	// Use this for initialization
 	void Start ()
@@ -25,18 +29,30 @@ public class frog_ArrowCtrl : MonoBehaviour {
             if (isDown)
             {
                 energy++;
+                if (!Arrow.enabled)
+                {
+                    Arrow.enabled = true;
+                }
             }
+            else
+                energy--;
         }
-        if (!isDown)
+        if (isStand)
         {
-            shoot();
-            energy = 0;
+            if (isShootable)
+            {
+                shoot();
+                energy = 0;
+            }
         }
     }
     
 
     void shoot()
     {
+
+        A_Shoot.Play();
+        
         skill = Random.Range(0, 5);
         switch (skill)
         {
