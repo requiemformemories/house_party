@@ -3,11 +3,25 @@ using System.Collections;
 
 public class EJ_MotionMonitor : MonoBehaviour {
 
-	
 
+    public static EJ_MotionMonitor instance = null;
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+        {
+            Debug.LogError("why is there two SoundManager instance?!");
+            Destroy(gameObject);
+        }
 
-	// Use this for initialization
-	void Start () {
+        DontDestroyOnLoad(gameObject);
+
+    }
+}
+
+    // Use this for initialization
+    void Start () {
 		Input.gyro.enabled = true;
 	}
 	
