@@ -18,7 +18,6 @@ public class EJ_MotionMonitor : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
 
     }
-}
 
     // Use this for initialization
     void Start () {
