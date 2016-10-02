@@ -56,7 +56,6 @@ public class frog_ArrowCtrl : MonoBehaviour {
         //Debug.Log(energy);
         if (isDown)
         {
-            S.enabled = false;
             if (energy < 100)
             {
 
@@ -134,5 +133,12 @@ public class frog_ArrowCtrl : MonoBehaviour {
         {
             Fail.SetActive(true);
         }
+        Invoke("GG", 1f);
+    }
+
+    void GG()
+    {
+        S.enabled = false;
+
     }
 }

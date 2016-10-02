@@ -7,6 +7,7 @@ public class frog_Monster : MonoBehaviour {
     public int Hp;
     public float CDspeed;
     public int atk;
+
     public void DestoryThis()
     {
         Destroy(gameObject);
