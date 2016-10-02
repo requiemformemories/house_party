@@ -37,11 +37,13 @@ public class frog_GameManager : MonoBehaviour {
     void Start ()
     {
         isStart = false;
-        isDown = false;
+        
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        isDown = Ctrl.isDown();
+        //Debug.Log(Ctrl.isEnable);
         if (!isStart)
         {
 
@@ -50,7 +52,7 @@ public class frog_GameManager : MonoBehaviour {
             {
                 GetReady.enabled = true;
                 count -= Time.deltaTime;
-                Debug.Log(count);
+                //Debug.Log(count);
                 x = Mathf.FloorToInt(count);
                 if (x == 3)
                 {
@@ -88,7 +90,7 @@ public class frog_GameManager : MonoBehaviour {
                     Go.GetComponent<TweenAlpha>().onFinished.Add(new EventDelegate(() => { Destroy(Go.gameObject);Ctrl.isEnable = true; }));
                     Go.GetComponent<TweenScale>().PlayForward();
                     Go.GetComponent<TweenAlpha>().PlayForward();
-
+                    
                 }
 
             }

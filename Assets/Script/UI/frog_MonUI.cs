@@ -4,6 +4,8 @@ using System.Collections;
 public class frog_MonUI : MonoBehaviour {
     public UISprite HP;
     public UISprite CD;
+    public GameObject Super;
+    public TweenAlpha Blood;
     float CDvalue;
     int HPvalue;
     int fullHp;
@@ -35,14 +37,20 @@ public class frog_MonUI : MonoBehaviour {
         else
         {
 
-            Debug.Log(Mon);
+            //Debug.Log(Mon);
             CD.fillAmount += 0.002f * Mon.CDspeed;
+            Super.transform.localScale = CD.fillAmount * Vector3.one;
             if (CD.fillAmount == 1)
             {
                 CD.fillAmount = 0;
-                frog_Stagedata.instance.playerHp -= Mon.atk;
+                frog_Stagedata.instance.playerHp -= 10*Mon.atk;
+                JUNK.instance.Anim();
                 
-                //Debug.Log(frog_Stagedata.instance.playerHp);
+                Debug.Log(frog_Stagedata.instance.playerHp);
+            }
+            if ((frog_Stagedata.instance.playerHp / 1000) < 0.5)
+            {
+                Blood.to = 1 - (frog_Stagedata.instance.playerHp / 1000);
             }
             if (HPvalue > Mon.Hp)
             {

@@ -4,7 +4,6 @@ using System.Collections;
 public class JUNK : MonoBehaviour {
 
     public static JUNK instance;
-    public TweenRotation[] TR = new TweenRotation[3];
     public GameObject camara;
 
 
@@ -21,11 +20,6 @@ public class JUNK : MonoBehaviour {
 
     public void Anim()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            TR[i].onFinished.Add(new EventDelegate(() => { TR[i].enabled = false; }));
-            TR[i].PlayForward();
-        }
         GameObject s = (GameObject)Instantiate(Resources.Load("slash"));
         s.transform.parent = gameObject.transform;
         s.transform.localPosition = Vector3.zero;

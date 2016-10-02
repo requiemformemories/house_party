@@ -15,9 +15,10 @@ public class frog_Monster : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(Hp);
+        //Debug.Log(Hp);
         if (Hp<=0)
         {
+            frog_Stagedata.instance.level++;
             TA.onFinished.Add(new EventDelegate(() =>
             {
                 Destroy(gameObject);
