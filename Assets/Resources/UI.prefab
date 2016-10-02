@@ -210,6 +210,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: noodles
+    x: 3324
+    y: 1807
+    width: 184
+    height: 241
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: one
     x: 717
     y: 45
@@ -223,11 +236,11 @@ MonoBehaviour:
     paddingRight: 4
     paddingTop: 1
     paddingBottom: 1
-  - name: Slash
+  - name: 'Slash '
     x: 0
-    y: 46
+    y: 48
     width: 348
-    height: 150
+    height: 148
     borderLeft: 0
     borderRight: 0
     borderTop: 0
