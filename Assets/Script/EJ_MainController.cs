@@ -8,38 +8,51 @@ using System.Collections;
 //下面我们使用脚本来掩饰重力感应效果，分别控制贴图移动和方块移动。
 
 public class EJ_MainController : MonoBehaviour {
-	private int UpperBoundY;
-	private int LowerBoundY;
-	private float x,y;//贴图的坐标  
-	private float gravZ;
-	private float fYShift;
+	private float UpperBoundY;
+	private float LowerBoundY; 
 
-	void Start(){x = 0; y = 0;
-		UpperBoundY = 1200;
-		LowerBoundY = -600;
+	private float UpperBoundX;
+	private float LowerBoundX;
+
+	private float gravX;
+	private float gravZ;
+
+	private float fYShift;
+	private float fXShift;
+
+	void Start(){
+		UpperBoundY = (float)0.7;
+		LowerBoundY = (float)0.0;
+		UpperBoundX = (float)0.35;
+		LowerBoundX = (float)-0.35;
 		gravZ = (float)-1.0;
-		fYShift = (float)0.0;
+		gravX = (float)0.0;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		gravZ = Input.acceleration.z;
-		if (gravZ < 0.0)
-			transform.Translate(0,transform.position.y - LowerBoundY,0);
+		if (gravZ < 0.10)
+			fYShift = -transform.position.y + LowerBoundY;
 		else if (gravZ >= 0.95)
-			transform.TransformPoint(0,UpperBoundY - transform.position.y,0);
+			fYShift = -transform.position.y + UpperBoundY;
 		else
-			transform.TransformPoint(0,(transform.position.y - ((1800 * gravF + 1200) + 600 )),0);
+			fYShift = -transform.position.y + (UpperBoundY - LowerBoundY) *
+			(float)(gravZ - (float)0.10) / (float)0.85 + LowerBoundY;
+
+//		gravX = Input.acceleration.x;
+//		if (gravX < -0.85)
+//			fXShift = -transform.position.x + LowerBoundX;
+//		else if (gravX >= 0.85)
+//			fXShift = -transform.position.x + UpperBoundX;
+//		else
+//			fXShift = -transform.position.x + (UpperBoundX - LowerBoundX) *
+//				(float)(gravX + (float)0.85) / (float)1.7 + LowerBoundX;
+
+		transform.Translate (0, fYShift, 0);
 	}
 
-	public bool isStandUp(){
-		if ((gravF - Mathf.Abs((float)-1.0)) <= 0.05) {
-			return false;
-		} else {
-			return true;
-		}
-	}
 	void OnGUI(){  
 		//将重力分量打印出来  
 		GUI.Label(new Rect(100,100,300,300),"x="+Input.acceleration.x+"   y="+Input.acceleration.y+"   z="+Input.acceleration.z);  
