@@ -44,6 +44,7 @@ GameObject:
   - 114: {fileID: 11426960}
   - 114: {fileID: 11486268}
   - 114: {fileID: 11486780}
+  - 114: {fileID: 11458130}
   m_Layer: 8
   m_Name: King
   m_TagString: Untagged
@@ -970,6 +971,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 0}
+--- !u!114 &11458130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 31cbedc7c84bfcf4f93a6f3cde44e18c, type: 3}
+  trigger: 6
+  volume: 1
+  pitch: 1
 --- !u!114 &11462556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1447,7 +1463,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: trigger
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31cbedc7c84bfcf4f93a6f3cde44e18c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128460}

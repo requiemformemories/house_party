@@ -15,6 +15,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
     public UISprite EnergyBar;
     frog_Monster Mon;
     public GameObject Fail;
+    public UIPlaySound S;
     // Use this for initialization
     public void IsStand()
     {
@@ -55,6 +56,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
         //Debug.Log(energy);
         if (isDown)
         {
+            S.enabled = false;
             if (energy < 100)
             {
 
@@ -84,6 +86,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
 
     void shoot()
     {
+        S.enabled = true;
         Arrow.enabled = false;
         ShootSprite.enabled = true;
         A_Shoot.Play();

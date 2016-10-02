@@ -97,6 +97,7 @@ GameObject:
   - 114: {fileID: 608465469}
   - 114: {fileID: 608465468}
   - 65: {fileID: 608465470}
+  - 114: {fileID: 608465471}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -279,6 +280,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 500, y: 100, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &608465471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608465465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e64dd6166e16a4a8cb91207da78cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundResource: {fileID: 8300000, guid: 21d7356a286a7094aaf89997447ff7c8, type: 3}
+  DelayTime: 0
+  audiotrack: 2
 --- !u!1 &1423214421
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +534,7 @@ GameObject:
   - 82: {fileID: 1910500886}
   - 82: {fileID: 1910500885}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SoundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,7 +591,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -598,7 +613,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &1910500886
 AudioSource:
   m_ObjectHideFlags: 0
@@ -608,7 +623,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 239df50cb436a7142b5cdee91161c71b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -650,7 +665,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -672,7 +687,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &1910500887
 AudioSource:
   m_ObjectHideFlags: 0
@@ -835,7 +850,7 @@ MonoBehaviour:
   UISoundSource: {fileID: 1910500888}
   FxSoundSource: {fileID: 1910500887}
   bgmSource1: {fileID: 1910500886}
-  bgmSource2: {fileID: 0}
+  bgmSource2: {fileID: 1910500885}
   AudioSources: []
   lowPitchRange: 0.95
   highPitchRange: 1.05

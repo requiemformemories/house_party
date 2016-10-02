@@ -192,6 +192,7 @@ GameObject:
   - 4: {fileID: 20208446}
   - 114: {fileID: 20208447}
   - 114: {fileID: 20208448}
+  - 114: {fileID: 20208449}
   m_Layer: 8
   m_Name: Bow
   m_TagString: Untagged
@@ -285,6 +286,22 @@ MonoBehaviour:
   A_Shoot: {fileID: 19772440}
   EnergyBar: {fileID: 1081420562}
   Fail: {fileID: 0}
+  S: {fileID: 0}
+--- !u!114 &20208449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20208445}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 790753afaae83af4495021ef0384b84a, type: 3}
+  trigger: 6
+  volume: 1
+  pitch: 1
 --- !u!1001 &33858191
 Prefab:
   m_ObjectHideFlags: 0
@@ -641,6 +658,7 @@ GameObject:
   - 4: {fileID: 92401591}
   - 114: {fileID: 92401593}
   - 114: {fileID: 92401592}
+  - 114: {fileID: 92401590}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -648,6 +666,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &92401590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92401589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293a011a7f2d12242822a7eaf7aa44fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundResource: {fileID: 8300000, guid: f4e9deb62134f6b4986b4b907383bb6b, type: 3}
+  DelayTime: 0
+  audiotrack: 0
 --- !u!4 &92401591
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,6 +1424,7 @@ GameObject:
   - 20: {fileID: 748141174}
   - 114: {fileID: 748141173}
   - 114: {fileID: 748141175}
+  - 81: {fileID: 748141176}
   m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
@@ -1498,6 +1531,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnable: 0
+--- !u!81 &748141176
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748141171}
+  m_Enabled: 1
 --- !u!1 &792183069
 GameObject:
   m_ObjectHideFlags: 0
