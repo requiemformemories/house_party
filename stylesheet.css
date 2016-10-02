@@ -1,0 +1,114 @@
+﻿*{
+  padding: 0;
+  margin: 0;
+  font-family: "微軟正黑體", "Heiti TC", Calibri
+}
+
+h2{
+  padding: 20px 0;
+  font-size: 40px;
+  font-weight: bold; 
+}
+
+.hl-light{ /*hl = highlight*/
+  font-weight: bold; 
+  color: #E8D783;
+}
+
+.pic{
+  width: 100%;
+  padding: 0 30%;
+}
+
+#page-1{
+  background-color: #4bacc6;
+  padding: 200px 0;
+  color: #fff;	
+}
+
+#page-1 h1{
+  font-size: 100px;
+  font-weight: bold; 
+
+}
+
+#page-1 p{
+  font-size: 20px;
+
+}
+
+#page-2{
+  background-image: url("pics/bg-2.jpg");
+  background-size: cover;
+  /*background-color: #d7e2f7;*/
+  padding: 20px 100px 150px;
+  color: #0f0f0f;	
+}
+
+#page-2 h2{
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.feature-box{
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+  padding: 10px 30px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #0f0f0f;
+}
+
+.feature-box i{
+  margin: 10px;
+  font-size: 100px;
+}
+
+#page-3{
+  background-color: #f29a10;
+  padding: 10px 100px;
+  color: #ffffff;	
+}
+
+#page-4{
+  background-image: url("pics/bg-4.jpg");
+  background-size: cover;
+  padding: 10px 100px;
+  color: #ffffff; 
+}
+
+.group-desc{
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+#main-footer{
+  padding: 30px;
+  background-color: #141414;
+  color: #fff;
+}
+
+#main-footer p{
+  margin-top: 20px;
+}
+
+@media(max-width: 480px) {
+  #page-1 h1{
+    font-size: 80px;
+  }
+  #page-2{
+    padding: 20px 5px 50px;
+  }
+  #page-3{
+    padding: 10px 5px;
+  }
+  .pic{
+    width: 100%;
+    padding: 0 5%;
+  }
+  #page-4{
+    padding: 10px 5px;
+  }
+
+}
