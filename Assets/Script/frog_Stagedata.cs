@@ -7,6 +7,8 @@ public class frog_Stagedata : MonoBehaviour {
     public int playerHp;
     public int combo;
     public bool isFever;
+    public int monster = 1;
+    public int Hited = 0;
     void Awake()
     {
         if (instance == null)

@@ -5,7 +5,7 @@ public class frog_MonsterManager : MonoBehaviour {
     public static frog_MonsterManager instance;
 
     public bool isNomonster;
-
+    string name;
     void Awake()
     {
         if (instance == null)
@@ -20,12 +20,17 @@ public class frog_MonsterManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
-	}
+        name = "Mummy";
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (frog_Stagedata.instance.monster == 10)
+        {
+            name = "King";
+        }
         if (isNomonster)
         {
             GameObject monster = (GameObject)Instantiate(Resources.Load("Mummy"));

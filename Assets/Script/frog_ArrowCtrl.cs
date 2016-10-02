@@ -14,6 +14,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
     public UISpriteAnimation A_Shoot;
     public UISprite EnergyBar;
     frog_Monster Mon;
+    public GameObject Fail;
     // Use this for initialization
     public void IsStand()
     {
@@ -125,5 +126,10 @@ public class frog_ArrowCtrl : MonoBehaviour {
         Mon = GameObject.FindObjectOfType<frog_Monster>();
         //Debug.Log(Mon);
         Mon.Hp = 0;
+        frog_Stagedata.instance.monster++;
+        if (frog_Stagedata.instance.monster == 11)
+        {
+            Fail.SetActive(true);
+        }
     }
 }

@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 90f2c691373e5f54faf415c637b4077a, type: 2}
   mSprites:
   - name: mummy_body
-    x: 0
-    y: 257
+    x: 1054
+    y: 214
     width: 476
     height: 810
     borderLeft: 0
@@ -54,9 +54,35 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: mummy_boss_body
+    x: 577
+    y: 214
+    width: 476
+    height: 810
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: mummy_boss_eye
+    x: 577
+    y: 161
+    width: 52
+    height: 52
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: mummy_eye
     x: 577
-    y: 1996
+    y: 108
     width: 52
     height: 52
     borderLeft: 0
@@ -69,7 +95,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: mummy_shadow
     x: 0
-    y: 1068
+    y: 44
     width: 576
     height: 980
     borderLeft: 0
