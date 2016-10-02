@@ -11,7 +11,6 @@ public class frog_MonUI : MonoBehaviour {
     float x;
     float totalx = 0;
     frog_Monster Mon;
-    public TweenRotation[] TR = new TweenRotation[3];
 
     // Use this for initialization
     void Start () {
@@ -67,12 +66,13 @@ public class frog_MonUI : MonoBehaviour {
         }
 
     }
-    void Anim()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            TR[i].onFinished.Add(new EventDelegate(() => { TR[i].enabled = false; }));
-
-        }
-    }
+    //void Anim()
+    //{
+    //    for (int i = 0; i < 3; i++)
+    //    {
+    //        TR[i].onFinished.Add(new EventDelegate(() => { TR[i].enabled = false; }));
+    //        TR[i].PlayForward();
+    //    }
+    //    Slash.PlayForward();
+    //}
 }

@@ -41,6 +41,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: a53c3cae3a884cf4781bf1ad6e903f23, type: 2}
   mSprites:
+  - name: Blood
+    x: 1743
+    y: 1024
+    width: 2048
+    height: 1024
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Glass
     x: 0
     y: 715
