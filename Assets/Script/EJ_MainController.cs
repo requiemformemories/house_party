@@ -19,10 +19,11 @@ public class EJ_MainController : MonoBehaviour {
 
 	private float fYShift;
 	private float fXShift;
+    public bool isEnable;
 
-	void Start(){
-		UpperBoundY = (float)0.7;
-		LowerBoundY = (float)0.0;
+    void Start(){
+		UpperBoundY = (float)1.2;
+		LowerBoundY = (float)-4;
 		UpperBoundX = (float)0.35;
 		LowerBoundX = (float)-0.35;
 		gravZ = (float)-1.0;
@@ -33,6 +34,9 @@ public class EJ_MainController : MonoBehaviour {
 	void Update()
 	{
 		gravZ = Input.acceleration.z;
+        if (isEnable)
+        {
+
 		if (gravZ < 0.10)
 			fYShift = -transform.position.y + LowerBoundY;
 		else if (gravZ >= 0.95)
@@ -40,18 +44,26 @@ public class EJ_MainController : MonoBehaviour {
 		else
 			fYShift = -transform.position.y + (UpperBoundY - LowerBoundY) *
 			(float)(gravZ - (float)0.10) / (float)0.85 + LowerBoundY;
+        }
 
-//		gravX = Input.acceleration.x;
-//		if (gravX < -0.85)
-//			fXShift = -transform.position.x + LowerBoundX;
-//		else if (gravX >= 0.85)
-//			fXShift = -transform.position.x + UpperBoundX;
-//		else
-//			fXShift = -transform.position.x + (UpperBoundX - LowerBoundX) *
-//				(float)(gravX + (float)0.85) / (float)1.7 + LowerBoundX;
+        //		gravX = Input.acceleration.x;
+        //		if (gravX < -0.85)
+        //			fXShift = -transform.position.x + LowerBoundX;
+        //		else if (gravX >= 0.85)
+        //			fXShift = -transform.position.x + UpperBoundX;
+        //		else
+        //			fXShift = -transform.position.x + (UpperBoundX - LowerBoundX) *
+        //				(float)(gravX + (float)0.85) / (float)1.7 + LowerBoundX;
 
-		transform.Translate (0, fYShift, 0);
+        transform.Translate (0, fYShift, 0);
 	}
+    public bool isDown()
+    {
+        if (gravZ >= 0.48)
+            return true;
+        else
+            return false;
+    }
 
 	void OnGUI(){  
 		//将重力分量打印出来  

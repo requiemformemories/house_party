@@ -43,7 +43,7 @@ MonoBehaviour:
   mSprites:
   - name: arcade
     x: 0
-    y: 63
+    y: 197
     width: 1000
     height: 449
     borderLeft: 0
@@ -54,6 +54,214 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 1
+  - name: "back\u62F7\u8C9D"
+    x: 1001
+    y: 898
+    width: 1000
+    height: 449
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 1
+  - name: "blood_frame\u62F7\u8C9D"
+    x: 2002
+    y: 1080
+    width: 1113
+    height: 154
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 4
+    paddingTop: 4
+    paddingBottom: 3
+  - name: "blood\u62F7\u8C9D"
+    x: 2002
+    y: 1008
+    width: 1086
+    height: 71
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 17
+    paddingTop: 74
+    paddingBottom: 16
+  - name: bow
+    x: 1001
+    y: 236
+    width: 983
+    height: 211
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 38
+    paddingBottom: 0
+  - name: "easy\u62F7\u8C9D"
+    x: 1001
+    y: 448
+    width: 1000
+    height: 449
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 1
+  - name: endless
+    x: 2002
+    y: 1235
+    width: 1000
+    height: 449
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 1
+  - name: GetReady
+    x: 2002
+    y: 1685
+    width: 1321
+    height: 363
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: hamberger
+    x: 349
+    y: 45
+    width: 179
+    height: 151
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: "hands_beside_ears\u62F7\u8C9D"
+    x: 0
+    y: 1348
+    width: 1000
+    height: 700
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: "hard\u62F7\u8C9D"
+    x: 3003
+    y: 1235
+    width: 1000
+    height: 449
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 1
+  - name: "laydown2\u62F7\u8C9D"
+    x: 0
+    y: 647
+    width: 1000
+    height: 700
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: "laydown\u62F7\u8C9D"
+    x: 1001
+    y: 1348
+    width: 1000
+    height: 700
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: one
+    x: 717
+    y: 45
+    width: 61
+    height: 151
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 4
+    paddingTop: 1
+    paddingBottom: 1
+  - name: Slash
+    x: 0
+    y: 46
+    width: 348
+    height: 150
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: three
+    x: 529
+    y: 43
+    width: 93
+    height: 153
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 3
+    paddingTop: 0
+    paddingBottom: 0
+  - name: two
+    x: 623
+    y: 44
+    width: 93
+    height: 152
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 1
+    paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
