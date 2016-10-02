@@ -5,7 +5,7 @@ public class frog_GameManager : MonoBehaviour {
 
     public UISprite GetReady;
     public UISprite Go;
-
+    public EJ_MainController Ctrl;
     public UISprite[] CountDown = new UISprite[3];
     public UIWidget Direct;
     public frog_ArrowCtrl A_Ctrl;
@@ -85,7 +85,7 @@ public class frog_GameManager : MonoBehaviour {
                     Direct.GetComponent<TweenAlpha>().PlayForward();
 
                     Go.enabled = true;
-                    Go.GetComponent<TweenAlpha>().onFinished.Add(new EventDelegate(() => { Destroy(Go.gameObject); }));
+                    Go.GetComponent<TweenAlpha>().onFinished.Add(new EventDelegate(() => { Destroy(Go.gameObject);Ctrl.isEnable = true; }));
                     Go.GetComponent<TweenScale>().PlayForward();
                     Go.GetComponent<TweenAlpha>().PlayForward();
 
