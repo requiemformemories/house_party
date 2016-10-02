@@ -40,7 +40,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: d0fa85968a750ab43bd7738562a00259, type: 2}
-  mSprites: []
+  mSprites:
+  - name: Allwhite
+    x: 0
+    y: 923
+    width: 2000
+    height: 1125
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0

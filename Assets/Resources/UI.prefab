@@ -159,7 +159,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: hamberger
-    x: 349
+    x: 806
     y: 45
     width: 179
     height: 151
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: one
-    x: 717
-    y: 45
+    x: 1767
+    y: 84
     width: 61
     height: 151
     borderLeft: 0
@@ -249,6 +249,19 @@ MonoBehaviour:
     paddingRight: 4
     paddingTop: 1
     paddingBottom: 1
+  - name: opening_start
+    x: 349
+    y: 113
+    width: 456
+    height: 83
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 28
+    paddingTop: 11
+    paddingBottom: 6
   - name: 'Slash '
     x: 0
     y: 48
@@ -263,8 +276,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: three
-    x: 529
-    y: 43
+    x: 1579
+    y: 82
     width: 93
     height: 153
     borderLeft: 0
@@ -276,8 +289,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: two
-    x: 623
-    y: 44
+    x: 1673
+    y: 83
     width: 93
     height: 152
     borderLeft: 0
