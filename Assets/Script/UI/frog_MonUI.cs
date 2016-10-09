@@ -12,7 +12,7 @@ public class frog_MonUI : MonoBehaviour {
     bool isDamaging = false;
     float x;
     float totalx = 0;
-    frog_Monster Mon;
+    frog_Monster Mon = null;
 
     // Use this for initialization
     void Start () {
@@ -23,6 +23,7 @@ public class frog_MonUI : MonoBehaviour {
             CDvalue = Mon.CDspeed;
 
         }
+        Blood = GameObject.Find("Blood").GetComponent<TweenAlpha>();
         CD.fillAmount = 0;
     }
 
@@ -30,7 +31,10 @@ public class frog_MonUI : MonoBehaviour {
     void FixedUpdate () {
         if (Mon == null)
         {
-            Mon = GameObject.Find("Mummy(Clone)").GetComponent<frog_Monster>();
+            if (frog_Stagedata.instance.monster > 2)
+                Mon = GameObject.Find("King(Clone)").GetComponent<frog_Monster>();
+            else
+                Mon = GameObject.Find("Mummy(Clone)").GetComponent<frog_Monster>();
 
             Start();
         }
@@ -43,10 +47,8 @@ public class frog_MonUI : MonoBehaviour {
             if (CD.fillAmount == 1)
             {
                 CD.fillAmount = 0;
-                frog_Stagedata.instance.playerHp -= 10*Mon.atk;
                 JUNK.instance.Anim();
                 frog_Stagedata.instance.Hited++;
-                Debug.Log(frog_Stagedata.instance.playerHp);
                 Blood.to = frog_Stagedata.instance.Hited / 10;
 
             }

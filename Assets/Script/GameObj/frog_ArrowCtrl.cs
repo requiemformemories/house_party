@@ -15,7 +15,8 @@ public class frog_ArrowCtrl : MonoBehaviour {
     public UISprite EnergyBar;
     frog_Monster Mon;
     public GameObject Fail;
-    public UIPlaySound S;
+    //public UIPlaySound S;
+    public AudioClip SE;
     // Use this for initialization
     public void IsStand()
     {
@@ -50,33 +51,37 @@ public class frog_ArrowCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        isDown = Ctrl.isDown();
+        if (frog_Stagedata.instance.Hited == 11)
+        {
+            Fail.SetActive(true);
+        }
+
+
+        isDown = Ctrl.isDown;
 
         EnergyBar.fillAmount = (float)energy / 100f;
-        //Debug.Log(energy);
+        Debug.Log(energy);
         if (isDown)
         {
-            if (energy < 100)
-            {
+            if (!Arrow.enabled)
+                Arrow.enabled = true;
 
+            if (energy < 100)
                 energy++;
-                if (!Arrow.enabled)
-                {
-                    Arrow.enabled = true;
-                }
-            }
         }
         else
+        {
             if (energy > 0)
+            {
+                if (isShootable)
                 {
+                    shoot();
                     energy = 0;
-                    if (isShootable)
-                    {
-                        shoot();
-                        energy = 0;
-                    }
-
                 }
+                else
+                    energy = 0;
+            }
+        }
 
 
     }
@@ -85,7 +90,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
 
     void shoot()
     {
-        S.enabled = true;
+        SoundManager.instance.PlayFxSound_Shot(SE);
         Arrow.enabled = false;
         ShootSprite.enabled = true;
         A_Shoot.Play();
@@ -124,21 +129,26 @@ public class frog_ArrowCtrl : MonoBehaviour {
         //        dmg = Random.Range(20000, 100000);
         //        break;
         //}
-        //Debug.Log(dmg);
         Mon = GameObject.FindObjectOfType<frog_Monster>();
-        //Debug.Log(Mon);
-        Mon.Hp = 0;
-        frog_Stagedata.instance.monster++;
-        if (frog_Stagedata.instance.monster == 11)
+        if (energy<50)
         {
-            Fail.SetActive(true);
+            Mon.Hp -= 1000;
         }
-        Invoke("GG", 1f);
+        else
+        {
+            if (Mon.isBoos)
+            {
+                Mon.Hp -= 1000;
+            }
+            else
+            {
+                Mon.isDead = true;
+            }
+
+        }
+        
+        frog_Stagedata.instance.Score += 1000;
+
     }
 
-    void GG()
-    {
-        S.enabled = false;
-
-    }
 }

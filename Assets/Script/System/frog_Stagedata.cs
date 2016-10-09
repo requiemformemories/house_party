@@ -4,11 +4,11 @@ using System.Collections;
 public class frog_Stagedata : MonoBehaviour {
     public static frog_Stagedata instance;
     public int level;
-    public int playerHp;
+    public int Score;
     public int combo;
     public bool isFever;
-    public int monster = 1;
-    public int Hited = 0;
+    public int monster;
+    public int Hited;
     void Awake()
     {
         if (instance == null)
@@ -21,13 +21,13 @@ public class frog_Stagedata : MonoBehaviour {
     }
         // Use this for initialization
     void Start () {
+        isFever = false;
         combo = 0;
         level = 1;
-        playerHp = 1000;
+        Score = 0;
+        monster = 0;
+        Hited = 0;
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

@@ -9,6 +9,7 @@ public class JUNK : MonoBehaviour {
 
     void Awake()
     {
+        camara = GameObject.Find("Camera");
         if (instance == null)
             instance = this;
         else if (instance != this)

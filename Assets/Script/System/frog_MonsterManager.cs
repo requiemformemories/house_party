@@ -3,9 +3,8 @@ using System.Collections;
 
 public class frog_MonsterManager : MonoBehaviour {
     public static frog_MonsterManager instance;
-
+    string M_name;
     public bool isNomonster;
-    string name;
     void Awake()
     {
         if (instance == null)
@@ -19,27 +18,26 @@ public class frog_MonsterManager : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-        name = "Mummy";
-
-    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (frog_Stagedata.instance.monster == 10)
-        {
-            name = "King";
-        }
         if (isNomonster)
         {
-            GameObject monster = (GameObject)Instantiate(Resources.Load("Mummy"));
+
+            if (frog_Stagedata.instance.monster > 2)
+                M_name = "King";
+            else
+                M_name = "Mummy";
+
+            Debug.Log("怪物"+frog_Stagedata.instance.monster);
+            GameObject monster = (GameObject)Instantiate(Resources.Load(M_name));
             monster.transform.parent = gameObject.transform;
             monster.transform.localPosition = Vector3.zero;
             monster.transform.localScale = Vector3.one;
             gameObject.GetComponent<UITweener>().PlayForward();
             frog_Monster data = monster.GetComponent<frog_Monster>();
-            data.Hp = 5000 * frog_Stagedata.instance.level;
+            data.Hp = 5000; // * frog_Stagedata.instance.level;
             data.CDspeed = Random.Range(1f, 6f);
             data.atk = Mathf.FloorToInt(100 / data.CDspeed);
             isNomonster = false;

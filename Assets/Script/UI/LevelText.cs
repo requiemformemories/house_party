@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class myLable : MonoBehaviour {
+public class LevelText : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

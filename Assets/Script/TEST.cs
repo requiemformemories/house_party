@@ -2,15 +2,16 @@
 using System.Collections;
 
 public class TEST : MonoBehaviour {
-    public UITweener MyTween;
-    frog_Monster Mon;
+    public EJ_MainController Ctrl;
 
     void Start()
     {
-        Mon = GameObject.FindObjectOfType<frog_Monster>();
     }
-    public void Press()
+    public void StandSwich()
     {
-
+        if (Ctrl.isDown == true)
+            Ctrl.isDown = false;
+        else
+            Ctrl.isDown = true;
     }
 }

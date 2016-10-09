@@ -20,6 +20,8 @@ public class EJ_MainController : MonoBehaviour {
 	private float fYShift;
 	private float fXShift;
     public bool isEnable;
+    //新增是否躺好的bool
+    public bool isDown;
 
     void Start(){
 		UpperBoundY = (float)1.2;
@@ -33,7 +35,15 @@ public class EJ_MainController : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+
 		gravZ = Input.acceleration.z;
+
+        //改成每偵判斷isDown布林值，實機測試前要啟用(去掉註解)
+        //if (gravZ >= 0.48)
+        //    isDown = true;
+        //else
+        //    isDown = false;
+
         if (isEnable)
         {
 
@@ -57,13 +67,16 @@ public class EJ_MainController : MonoBehaviour {
 
         transform.Translate (0, fYShift, 0);
 	}
-    public bool isDown()
-    {
-        if (gravZ >= 0.48)
-            return true;
-        else
-            return false;
-    }
+
+
+    //舊版API
+    //public bool isDown()
+    //{
+    //    if (gravZ >= 0.48)
+    //        return true;
+    //    else
+    //        return false;
+    //}
 
 	void OnGUI(){  
 		//将重力分量打印出来  

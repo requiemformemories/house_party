@@ -260,12 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697d68021ed64fb41b119dc062f95092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StageID: 0
   SceneName: Stage
-  BlackFadinTime: 0
-  IsNormalButton: 0
-  IsIdAssignedButton: 0
-  IsTestMode: 0
   blk: {fileID: 2034700349}
   btn: {fileID: 608465468}
 --- !u!65 &608465470

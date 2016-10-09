@@ -5,12 +5,7 @@ using UnityEngine.SceneManagement;
 
 
 public class LoadScene : MonoBehaviour {
-    public int StageID;
     public string SceneName;
-    public float BlackFadinTime;
-    public bool IsNormalButton;
-    public bool IsIdAssignedButton;
-    public bool IsTestMode;
     public TweenAlpha blk;
     public TweenAlpha btn;
 

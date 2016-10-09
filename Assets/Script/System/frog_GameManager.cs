@@ -13,26 +13,26 @@ public class frog_GameManager : MonoBehaviour {
     bool isDown;
     bool isStart;
     float count = 4;
-    public void IsDown()
-    {
-        if (isDown)
-        {
-            isDown = false;
-        }
-        else
-            isDown = true;
-        Debug.Log(isDown);
-    }
-    public void IsStart()
-    {
-        if (isStart)
-        {
-            isStart = false;
-        }
-        else
-            isStart = true;
-        Debug.Log(isStart);
-    }
+    //public void IsDown()
+    //{
+    //    if (isDown)
+    //    {
+    //        isDown = false;
+    //    }
+    //    else
+    //        isDown = true;
+    //    Debug.Log(isDown);
+    //}
+    //public void IsStart()
+    //{
+    //    if (isStart)
+    //    {
+    //        isStart = false;
+    //    }
+    //    else
+    //        isStart = true;
+    //    Debug.Log(isStart);
+    //}
     // Use this for initialization
     void Start ()
     {
@@ -42,7 +42,7 @@ public class frog_GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        isDown = Ctrl.isDown();
+        isDown = Ctrl.isDown;
         //Debug.Log(Ctrl.isEnable);
         if (!isStart)
         {
@@ -87,7 +87,11 @@ public class frog_GameManager : MonoBehaviour {
                     Direct.GetComponent<TweenAlpha>().PlayForward();
 
                     Go.enabled = true;
-                    Go.GetComponent<TweenAlpha>().onFinished.Add(new EventDelegate(() => { Destroy(Go.gameObject);Ctrl.isEnable = true; }));
+                    Go.GetComponent<TweenAlpha>().onFinished.Add(new EventDelegate(
+                        () => 
+                        { Destroy(Go.gameObject);
+                            Ctrl.isEnable = true;
+                        }));
                     Go.GetComponent<TweenScale>().PlayForward();
                     Go.GetComponent<TweenAlpha>().PlayForward();
                     

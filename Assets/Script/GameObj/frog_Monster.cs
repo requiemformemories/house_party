@@ -2,7 +2,11 @@
 using System.Collections;
 
 public class frog_Monster : MonoBehaviour {
-    bool isDead = false;
+    public bool isDead = false;
+    public bool isBoos;
+    string MonsterName;
+    public UILabel UIMonsterName;
+
     public TweenAlpha TA;
     public int Hp;
     public float CDspeed;
@@ -12,13 +16,28 @@ public class frog_Monster : MonoBehaviour {
     {
         Destroy(gameObject);
     }
-    
+
+    void Start()
+    {
+        if (isBoos)
+            MonsterName = "King";
+        else
+            MonsterName = "Mummy";
+        UIMonsterName.text = MonsterName;
+
+    }
 
     void Update()
     {
-        //Debug.Log(Hp);
-        if (Hp<=0)
+        if (Hp<=1)
         {
+            isDead = true;
+        }
+        //Debug.Log(Hp);
+        if (isDead )
+        {
+            frog_Stagedata.instance.monster++;
+
             frog_Stagedata.instance.level++;
             TA.onFinished.Add(new EventDelegate(() =>
             {
@@ -26,6 +45,7 @@ public class frog_Monster : MonoBehaviour {
                 frog_MonsterManager.instance.isNomonster = true;
             }));
             TA.PlayForward();
+            isDead = false;
         }
     }
 }

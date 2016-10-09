@@ -239,7 +239,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 370, y: -187, z: 0}
+  m_LocalPosition: {x: 185, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 403790}
@@ -1220,6 +1220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc5a3e5751e3654a89c98eaa8c9b452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDead: 0
+  isBoos: 1
+  UIMonsterName: {fileID: 11413184}
   TA: {fileID: 11486780}
   Hp: -1
   CDspeed: -1
