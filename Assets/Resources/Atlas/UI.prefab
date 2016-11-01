@@ -41,6 +41,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 82ba309b6340d6e4687eb63c345dc4bd, type: 2}
   mSprites:
+  - name: Allwhite
+    x: 349
+    y: 11
+    width: 125
+    height: 101
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: arcade
     x: 0
     y: 197
@@ -106,6 +119,45 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 38
     paddingBottom: 0
+  - name: Cursor1
+    x: 1579
+    y: 26
+    width: 212
+    height: 209
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 78
+    paddingRight: 10
+    paddingTop: 56
+    paddingBottom: 35
+  - name: Cursor2
+    x: 3324
+    y: 1800
+    width: 226
+    height: 248
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 67
+    paddingRight: 7
+    paddingTop: 43
+    paddingBottom: 9
+  - name: Cursor3
+    x: 3736
+    y: 1901
+    width: 244
+    height: 147
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 44
+    paddingRight: 12
+    paddingTop: 120
+    paddingBottom: 33
   - name: "easy\u62F7\u8C9D"
     x: 1001
     y: 448
@@ -132,6 +184,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 1
+  - name: Energy
+    x: 4004
+    y: 1457
+    width: 53
+    height: 227
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: "fail\u62F7\u8C9D"
     x: 1001
     y: 35
@@ -224,7 +289,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: noodles
-    x: 3324
+    x: 3551
     y: 1807
     width: 184
     height: 241
@@ -237,8 +302,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: one
-    x: 1767
-    y: 84
+    x: 3736
+    y: 1749
     width: 61
     height: 151
     borderLeft: 0
@@ -262,6 +327,19 @@ MonoBehaviour:
     paddingRight: 28
     paddingTop: 11
     paddingBottom: 6
+  - name: shoot
+    x: 475
+    y: 49
+    width: 168
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 43
+    paddingRight: 47
+    paddingTop: 32
+    paddingBottom: 49
   - name: 'Slash '
     x: 0
     y: 48
@@ -276,7 +354,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: three
-    x: 1579
+    x: 1792
     y: 82
     width: 93
     height: 153
@@ -289,7 +367,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: two
-    x: 1673
+    x: 1886
     y: 83
     width: 93
     height: 152

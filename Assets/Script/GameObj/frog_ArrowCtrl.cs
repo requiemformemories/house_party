@@ -7,12 +7,14 @@ public class frog_ArrowCtrl : MonoBehaviour {
     bool isDown;
     bool isStand;
     int energy;
-    int skill;
-    int dmg;
+    //int skill;
+    //int dmg;
     public UISprite ShootSprite;
     public UISprite Arrow;
     public UISpriteAnimation A_Shoot;
+    public ParticleSystem PS;
     public UISprite EnergyBar;
+    public UISprite EnergyShoot;
     frog_Monster Mon;
     public GameObject Fail;
     //public UIPlaySound S;
@@ -44,8 +46,8 @@ public class frog_ArrowCtrl : MonoBehaviour {
     void Start ()
     {
         energy = 0;
-        skill = -1;
-        dmg = 0;
+        //skill = -1;
+        //dmg = 0;
 	
 	}
 	
@@ -55,8 +57,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
         {
             Fail.SetActive(true);
         }
-
-
+        
         isDown = Ctrl.isDown;
 
         EnergyBar.fillAmount = (float)energy / 100f;
@@ -68,6 +69,8 @@ public class frog_ArrowCtrl : MonoBehaviour {
 
             if (energy < 100)
                 energy++;
+            else
+                EnergyShoot.enabled = true;
         }
         else
         {
@@ -77,9 +80,13 @@ public class frog_ArrowCtrl : MonoBehaviour {
                 {
                     shoot();
                     energy = 0;
+                    EnergyShoot.enabled = false;
                 }
                 else
+                {
                     energy = 0;
+                    EnergyShoot.enabled = false;
+                }
             }
         }
 
@@ -94,6 +101,8 @@ public class frog_ArrowCtrl : MonoBehaviour {
         Arrow.enabled = false;
         ShootSprite.enabled = true;
         A_Shoot.Play();
+        
+        PS.Play();
         if (energy == 100)
         {
             frog_Stagedata.instance.combo++;
@@ -110,7 +119,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
             frog_Stagedata.instance.isFever = false;    
 
         }
-        skill = Random.Range(0, 5);
+        //skill = Random.Range(0, 5);
         //switch (skill)
         //{
         //    case 0:

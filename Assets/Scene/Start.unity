@@ -85,6 +85,26 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &395993008 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+  m_PrefabInternal: {fileID: 1518836443}
+--- !u!4 &395993009 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+  m_PrefabInternal: {fileID: 1518836443}
+--- !u!114 &395993012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 395993008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beeadba51e5b0243a36358afeb1d370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetPanel: {fileID: 1423214421}
 --- !u!1 &608465465
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 608465465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -394, z: 0}
+  m_LocalPosition: {x: 0, y: -394, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1423214425}
@@ -262,7 +282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Stage
   blk: {fileID: 2034700349}
+  white: {fileID: 0}
   btn: {fileID: 608465468}
+  isHeavenBtn: 0
 --- !u!65 &608465470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -401,8 +423,59 @@ Transform:
   - {fileID: 1950418615}
   - {fileID: 608465466}
   - {fileID: 2034700348}
+  - {fileID: 395993009}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1001 &1518836443
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1423214425}
+    m_Modifications:
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900002, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a89abc0d2591545288f4c041059ae633, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1753680739
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +621,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -622,7 +695,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -1068,6 +1141,6 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11434134, guid: ec8e6e9b93caf0a43b33a864b50bf3e5, type: 2}
+  mAtlas: {fileID: 11469060, guid: 644e461c356f7f54d83eea6ebc8a11fc, type: 2}
   mSpriteName: Allwhite
   mFillCenter: 1

@@ -5,7 +5,6 @@ public class frog_MonUI : MonoBehaviour {
     public UISprite HP;
     public UISprite CD;
     public GameObject Super;
-    public TweenAlpha Blood;
     float CDvalue;
     int HPvalue;
     int fullHp;
@@ -23,7 +22,6 @@ public class frog_MonUI : MonoBehaviour {
             CDvalue = Mon.CDspeed;
 
         }
-        Blood = GameObject.Find("Blood").GetComponent<TweenAlpha>();
         CD.fillAmount = 0;
     }
 
@@ -49,8 +47,6 @@ public class frog_MonUI : MonoBehaviour {
                 CD.fillAmount = 0;
                 JUNK.instance.Anim();
                 frog_Stagedata.instance.Hited++;
-                Blood.to = frog_Stagedata.instance.Hited / 10;
-
             }
             if (HPvalue > Mon.Hp)
             {

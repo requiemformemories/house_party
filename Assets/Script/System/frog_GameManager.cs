@@ -3,6 +3,7 @@ using System.Collections;
 
 public class frog_GameManager : MonoBehaviour {
 
+    public TweenAlpha Blood;
     public UISprite GetReady;
     public UISprite Go;
     public EJ_MainController Ctrl;
@@ -42,6 +43,17 @@ public class frog_GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        if (Input.GetKey(KeyCode.UpArrow))
+            Ctrl.gameObject.transform.position += Vector3.up*Time.deltaTime * 2;
+        if (Input.GetKey(KeyCode.DownArrow))
+            Ctrl.gameObject.transform.position += Vector3.down * Time.deltaTime * 2;
+        if (Input.GetKey(KeyCode.LeftArrow))
+            Ctrl.gameObject.transform.position += Vector3.left * Time.deltaTime * 2;
+        if (Input.GetKey(KeyCode.RightArrow))
+            Ctrl.gameObject.transform.position += Vector3.right * Time.deltaTime * 2;
+
+        Blood.to = frog_Stagedata.instance.Hited / 10;
         isDown = Ctrl.isDown;
         //Debug.Log(Ctrl.isEnable);
         if (!isStart)

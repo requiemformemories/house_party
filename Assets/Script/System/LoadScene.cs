@@ -7,18 +7,31 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour {
     public string SceneName;
     public TweenAlpha blk;
+    public TweenAlpha white;
     public TweenAlpha btn;
+    public bool isHeavenBtn;
 
 
-
-    void OnClick()
+    public void OnClick()
     {
-        blk.onFinished.Add(new EventDelegate(() =>
+        if (isHeavenBtn)
         {
-            SceneManager.LoadScene(SceneName);
-        }));
-        blk.PlayForward();
-        btn.PlayForward();
+            white.onFinished.Add(new EventDelegate(() =>
+            {
+                SceneManager.LoadScene(SceneName);
+            }));
+            white.PlayForward();
+
+        }
+        else
+        {
+            blk.onFinished.Add(new EventDelegate(() =>
+            {
+                SceneManager.LoadScene(SceneName);
+            }));
+            blk.PlayForward();
+            btn.PlayForward();
+        }
     }
 
 

@@ -1227,6 +1227,8 @@ public class UIPanel : UIRect
 					if (p.drawCalls.Count != 0)
 						rq = Mathf.Max(rq, p.startingRenderQueue + 1);
 				}
+
+                rq += 5;
 			}
 		}
 	}

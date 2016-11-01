@@ -36,13 +36,13 @@ public class EJ_MainController : MonoBehaviour {
 	void Update()
 	{
 
-		gravZ = Input.acceleration.z;
+		gravZ = Input.acceleration.y;
 
         //改成每偵判斷isDown布林值，實機測試前要啟用(去掉註解)
-        //if (gravZ >= 0.48)
-        //    isDown = true;
-        //else
-        //    isDown = false;
+        if (gravZ >= 0.48)
+            isDown = true;
+        else
+            isDown = false;
 
         if (isEnable)
         {

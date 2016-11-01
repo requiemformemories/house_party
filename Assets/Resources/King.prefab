@@ -574,7 +574,6 @@ MonoBehaviour:
   HP: {fileID: 11487476}
   CD: {fileID: 11462556}
   Super: {fileID: 112538}
-  Blood: {fileID: 0}
 --- !u!114 &11415834
 MonoBehaviour:
   m_ObjectHideFlags: 1
