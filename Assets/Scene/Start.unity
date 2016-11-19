@@ -775,8 +775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Stage
-  Black: {fileID: 2034700349}
-  White: {fileID: 0}
+  BlackFade: {fileID: 2034700349}
+  WhiteForHeaven: {fileID: 0}
   TweenEffect: {fileID: 608465468}
   isHeavenBtn: 0
 --- !u!65 &608465470

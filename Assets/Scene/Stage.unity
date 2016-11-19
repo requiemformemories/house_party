@@ -8503,8 +8503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: FTScene
-  Black: {fileID: 1095015176}
-  White: {fileID: 0}
+  BlackFade: {fileID: 1095015176}
+  WhiteForHeaven: {fileID: 0}
   TweenEffect: {fileID: 0}
   isHeavenBtn: 0
 --- !u!114 &1023922039
@@ -9552,8 +9552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Start
-  Black: {fileID: 0}
-  White: {fileID: 1363129596}
+  BlackFade: {fileID: 0}
+  WhiteForHeaven: {fileID: 1363129596}
   TweenEffect: {fileID: 0}
   isHeavenBtn: 1
 --- !u!1 &1705882532
@@ -10383,8 +10383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: FTScene
-  Black: {fileID: 1095015176}
-  White: {fileID: 0}
+  BlackFade: {fileID: 1095015176}
+  WhiteForHeaven: {fileID: 0}
   TweenEffect: {fileID: 0}
   isHeavenBtn: 0
 --- !u!114 &2105266336
