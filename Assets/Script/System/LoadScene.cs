@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour {
     public string SceneName;
-    public TweenAlpha blk;
-    public TweenAlpha white;
-    public TweenAlpha btn;
+    public TweenAlpha Black;
+    public TweenAlpha White;
+    public TweenAlpha TweenEffect;
     public bool isHeavenBtn;
 
 
@@ -16,21 +16,26 @@ public class LoadScene : MonoBehaviour {
     {
         if (isHeavenBtn)
         {
-            white.onFinished.Add(new EventDelegate(() =>
+            White.onFinished.Add(new EventDelegate(() =>
             {
                 SceneManager.LoadScene(SceneName);
+                SoundManager.instance.VolumeFadeout(1, SoundManager.Channel.bgmSource1);
             }));
-            white.PlayForward();
+            White.PlayForward();
 
         }
         else
         {
-            blk.onFinished.Add(new EventDelegate(() =>
+
+            Black.onFinished.Add(new EventDelegate(() =>
             {
                 SceneManager.LoadScene(SceneName);
+                SoundManager.instance.VolumeFadeout(1,SoundManager.Channel.bgmSource1);
+
             }));
-            blk.PlayForward();
-            btn.PlayForward();
+            Black.PlayForward();
+            if(TweenEffect != null)
+            TweenEffect.PlayForward();
         }
     }
 

@@ -16,7 +16,6 @@ public class frog_ArrowCtrl : MonoBehaviour {
     public UISprite EnergyBar;
     public UISprite EnergyShoot;
     frog_Monster Mon;
-    public GameObject Fail;
     //public UIPlaySound S;
     public AudioClip SE;
     // Use this for initialization
@@ -53,10 +52,6 @@ public class frog_ArrowCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (frog_Stagedata.instance.Hited == 11)
-        {
-            Fail.SetActive(true);
-        }
         
         isDown = Ctrl.isDown;
 
@@ -151,7 +146,7 @@ public class frog_ArrowCtrl : MonoBehaviour {
             }
             else
             {
-                Mon.isDead = true;
+                Mon.Hp = 0;
             }
 
         }

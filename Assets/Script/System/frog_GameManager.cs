@@ -4,6 +4,8 @@ using System.Collections;
 public class frog_GameManager : MonoBehaviour {
 
     public TweenAlpha Blood;
+    public GameObject Fail;
+    public GameObject Victory;
     public UISprite GetReady;
     public UISprite Go;
     public EJ_MainController Ctrl;
@@ -13,7 +15,11 @@ public class frog_GameManager : MonoBehaviour {
     int x;
     bool isDown;
     bool isStart;
+    public bool TestMode;
     float count = 4;
+
+    public static frog_GameManager instance;
+
     //public void IsDown()
     //{
     //    if (isDown)
@@ -35,6 +41,18 @@ public class frog_GameManager : MonoBehaviour {
     //    Debug.Log(isStart);
     //}
     // Use this for initialization
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+        {
+            Debug.LogError("why is there two JUNK instance?!");
+            Destroy(gameObject);
+        }
+    }
+
     void Start ()
     {
         isStart = false;
@@ -43,17 +61,18 @@ public class frog_GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        if (TestMode)
+        {
+            if (Input.GetKey(KeyCode.UpArrow))
+                Ctrl.gameObject.transform.position += Vector3.up*Time.deltaTime * 8;
+            if (Input.GetKey(KeyCode.DownArrow))
+                Ctrl.gameObject.transform.position += Vector3.down * Time.deltaTime * 8;
+            if (Input.GetKey(KeyCode.LeftArrow))
+                Ctrl.gameObject.transform.position += Vector3.left * Time.deltaTime * 8;
+            if (Input.GetKey(KeyCode.RightArrow))
+                Ctrl.gameObject.transform.position += Vector3.right * Time.deltaTime * 8;
+        }
 
-        if (Input.GetKey(KeyCode.UpArrow))
-            Ctrl.gameObject.transform.position += Vector3.up*Time.deltaTime * 2;
-        if (Input.GetKey(KeyCode.DownArrow))
-            Ctrl.gameObject.transform.position += Vector3.down * Time.deltaTime * 2;
-        if (Input.GetKey(KeyCode.LeftArrow))
-            Ctrl.gameObject.transform.position += Vector3.left * Time.deltaTime * 2;
-        if (Input.GetKey(KeyCode.RightArrow))
-            Ctrl.gameObject.transform.position += Vector3.right * Time.deltaTime * 2;
-
-        Blood.to = frog_Stagedata.instance.Hited / 10;
         isDown = Ctrl.isDown;
         //Debug.Log(Ctrl.isEnable);
         if (!isStart)
@@ -112,6 +131,7 @@ public class frog_GameManager : MonoBehaviour {
             }
             else
             {
+
                 count = 4;
                 GetReady.enabled = false;
                 Go.enabled = false;
@@ -120,7 +140,41 @@ public class frog_GameManager : MonoBehaviour {
                     CountDown[i].enabled = false;
                 }
             }
+
+
+        }
+        else
+        {
+            if (TestMode)
+            {
+                if (Ctrl.gameObject.transform.localPosition.y < (-1600))
+                    Ctrl.isDown = false;
+                else
+                    Ctrl.isDown = true;
+            }
+        }
+    }
+
+    public void OnHited()
+    {
+        if (frog_Stagedata.instance.Hited>4)
+            Blood.to = (float)frog_Stagedata.instance.Hited / 10;
+        if (frog_Stagedata.instance.Hited == 11)
+        {
+            Loss();
         }
 
     }
+
+    void Loss()
+    {
+        Fail.SetActive(true);
+
+    }
+
+    public void Win()
+    {
+        Victory.SetActive(true);
+    }
+
 }

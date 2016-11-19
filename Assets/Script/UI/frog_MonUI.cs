@@ -47,6 +47,7 @@ public class frog_MonUI : MonoBehaviour {
                 CD.fillAmount = 0;
                 JUNK.instance.Anim();
                 frog_Stagedata.instance.Hited++;
+                frog_GameManager.instance.OnHited();
             }
             if (HPvalue > Mon.Hp)
             {

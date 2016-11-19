@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scene/Start.unity
   - enabled: 1
     path: Assets/Scene/Stage.unity
+  - enabled: 1
+    path: Assets/Scene/FTScene.unity

@@ -47,6 +47,7 @@ public class SoundManager : MonoBehaviour
         AudioSources = new AudioSource[] { UISoundSource, FxSoundSource, bgmSource1, bgmSource2 };
     }
 
+
      void FixedUpdate()
     {
         if (isfading)
@@ -78,6 +79,16 @@ public class SoundManager : MonoBehaviour
         originalVolme = AudioSources[i].volume;
         isfading = true;
     }
+
+    public void StopAll()
+    {
+        bgmSource1.Stop();
+        bgmSource2.Stop();
+        FxSoundSource.Stop();
+        UISoundSource.Stop();
+
+    }
+
     /// <summary>
     /// Play Fx Sound Of UI System (Completely)
     /// </summary>
@@ -143,11 +154,8 @@ public class SoundManager : MonoBehaviour
             onFadeoutFinished = new Action( ()=> { PlayBgm1(clip); });
         else
         {
-            if (bgmSource1.clip.name != clip.name || !bgmSource1.isPlaying)
-            {
                 bgmSource1.clip = clip;
                 bgmSource1.Play();
-            }
         }
     }
     /// <summary>
@@ -160,11 +168,8 @@ public class SoundManager : MonoBehaviour
             onFadeoutFinished = new Action(() => { PlayBgm2(clip); });
         else
         {
-            if (bgmSource2.clip.name != clip.name || !bgmSource2.isPlaying)
-            {
                 bgmSource2.clip = clip;
                 bgmSource2.Play();
-            }
 
         }
     }

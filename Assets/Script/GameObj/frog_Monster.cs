@@ -29,23 +29,26 @@ public class frog_Monster : MonoBehaviour {
 
     void Update()
     {
-        if (Hp<=1)
-        {
-            isDead = true;
-        }
         //Debug.Log(Hp);
-        if (isDead )
+        if (!isDead )
         {
-            frog_Stagedata.instance.monster++;
-
-            frog_Stagedata.instance.level++;
-            TA.onFinished.Add(new EventDelegate(() =>
+            if (Hp <= 1)
             {
-                Destroy(gameObject);
-                frog_MonsterManager.instance.isNomonster = true;
-            }));
-            TA.PlayForward();
-            isDead = false;
+                frog_Stagedata.instance.monster++;
+
+                frog_Stagedata.instance.level++;
+                TA.onFinished.Add(new EventDelegate(() =>
+                {
+                    Destroy(gameObject);
+                    frog_MonsterManager.instance.isNomonster = true;
+                }));
+                TA.PlayForward();
+                isDead = true;
+            }
+            if (frog_Stagedata.instance.monster == 6)
+            {
+                frog_GameManager.instance.Win();
+            }
         }
     }
 }

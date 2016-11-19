@@ -14,7 +14,7 @@ public class JUNK : MonoBehaviour {
             instance = this;
         else if (instance != this)
         {
-            Debug.LogError("why is there two frog_MonsterManager instance?!");
+            Debug.LogError("why is there two JUNK instance?!");
             Destroy(gameObject);
         }
     }

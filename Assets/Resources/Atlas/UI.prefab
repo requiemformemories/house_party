@@ -41,6 +41,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 82ba309b6340d6e4687eb63c345dc4bd, type: 2}
   mSprites:
+  - name: aim
+    x: 2002
+    y: 722
+    width: 512
+    height: 512
+    borderLeft: 5
+    borderRight: 5
+    borderTop: 5
+    borderBottom: 5
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Allwhite
     x: 349
     y: 11
@@ -81,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: "blood_frame\u62F7\u8C9D"
-    x: 2002
-    y: 1080
+    x: 2515
+    y: 659
     width: 1113
     height: 154
     borderLeft: 0
@@ -94,8 +107,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 3
   - name: "blood\u62F7\u8C9D"
-    x: 2002
-    y: 1008
+    x: 2515
+    y: 587
     width: 1086
     height: 71
     borderLeft: 0
@@ -107,8 +120,8 @@ MonoBehaviour:
     paddingTop: 74
     paddingBottom: 16
   - name: bow
-    x: 1001
-    y: 236
+    x: 2515
+    y: 1023
     width: 983
     height: 211
     borderLeft: 0
@@ -120,8 +133,8 @@ MonoBehaviour:
     paddingTop: 38
     paddingBottom: 0
   - name: Cursor1
-    x: 1579
-    y: 26
+    x: 2229
+    y: 143
     width: 212
     height: 209
     borderLeft: 0
@@ -133,8 +146,8 @@ MonoBehaviour:
     paddingTop: 56
     paddingBottom: 35
   - name: Cursor2
-    x: 3324
-    y: 1800
+    x: 2002
+    y: 104
     width: 226
     height: 248
     borderLeft: 0
@@ -146,8 +159,8 @@ MonoBehaviour:
     paddingTop: 43
     paddingBottom: 9
   - name: Cursor3
-    x: 3736
-    y: 1901
+    x: 3324
+    y: 1700
     width: 244
     height: 147
     borderLeft: 0
@@ -197,9 +210,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: "fail\u62F7\u8C9D"
+  - name: exit
     x: 1001
-    y: 35
+    y: 18
+    width: 854
+    height: 429
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: "fail\u62F7\u8C9D"
+    x: 3324
+    y: 1848
     width: 577
     height: 200
     borderLeft: 0
@@ -289,7 +315,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: noodles
-    x: 3551
+    x: 3902
     y: 1807
     width: 184
     height: 241
@@ -302,8 +328,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: one
-    x: 3736
-    y: 1749
+    x: 3569
+    y: 1696
     width: 61
     height: 151
     borderLeft: 0
@@ -353,9 +379,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: star
+    x: 2002
+    y: 353
+    width: 377
+    height: 368
+    borderLeft: 4
+    borderRight: 4
+    borderTop: 4
+    borderBottom: 4
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: three
-    x: 1792
-    y: 82
+    x: 1856
+    y: 294
     width: 93
     height: 153
     borderLeft: 0
@@ -367,8 +406,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: two
-    x: 1886
-    y: 83
+    x: 1856
+    y: 141
     width: 93
     height: 152
     borderLeft: 0
@@ -379,6 +418,19 @@ MonoBehaviour:
     paddingRight: 2
     paddingTop: 1
     paddingBottom: 0
+  - name: "victory\u62F7\u8C9D"
+    x: 2515
+    y: 814
+    width: 853
+    height: 208
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 25
+    paddingTop: 23
+    paddingBottom: 20
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
@@ -389,7 +441,39 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[25].borderLeft
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[25].borderRight
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[25].borderTop
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[25].borderBottom
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[0].borderLeft
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[0].borderRight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[0].borderTop
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[0].borderBottom
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180636}
