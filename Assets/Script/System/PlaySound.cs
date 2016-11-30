@@ -23,7 +23,7 @@ public class PlaySound : MonoBehaviour {
 
     void play()
     {
-        if (SoundResource != null)
+        if (SoundResource != null && SoundManager.instance != null)
         {
             if (audiotrack == AudioTrack.BGM1)
                 SoundManager.instance.PlayBgm1(SoundResource);
@@ -39,6 +39,6 @@ public class PlaySound : MonoBehaviour {
                 SoundManager.instance.PlayFxSound_Shot(SoundResource);
         }
         else
-            Debug.Log("SoundResource not found");
+            Debug.Log("SoundResource or SoundManager not found");
     }
 }

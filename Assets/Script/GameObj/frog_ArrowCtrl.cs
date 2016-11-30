@@ -56,7 +56,6 @@ public class frog_ArrowCtrl : MonoBehaviour {
         isDown = Ctrl.isDown;
 
         EnergyBar.fillAmount = (float)energy / 100f;
-        Debug.Log(energy);
         if (isDown)
         {
             if (!Arrow.enabled)
@@ -133,22 +132,18 @@ public class frog_ArrowCtrl : MonoBehaviour {
         //        dmg = Random.Range(20000, 100000);
         //        break;
         //}
-        Mon = GameObject.FindObjectOfType<frog_Monster>();
-        if (energy<50)
+        if (!frog_MonsterManager.instance.isNomonster)
         {
-            Mon.Hp -= 1000;
-        }
-        else
-        {
-            if (Mon.isBoos)
-            {
+            Mon = GameObject.FindObjectOfType<frog_Monster>();
+            if (energy < 50)
                 Mon.Hp -= 1000;
-            }
             else
             {
-                Mon.Hp = 0;
+                if (Mon.isBoos)
+                    Mon.Hp -= 1000;
+                else
+                    Mon.Hp = 0;
             }
-
         }
         
         frog_Stagedata.instance.Score += 1000;

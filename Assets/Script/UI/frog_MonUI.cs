@@ -5,7 +5,6 @@ public class frog_MonUI : MonoBehaviour {
     public UISprite HP;
     public UISprite CD;
     public GameObject Super;
-    float CDvalue;
     int HPvalue;
     int fullHp;
     bool isDamaging = false;
@@ -15,28 +14,24 @@ public class frog_MonUI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        if (Mon!=null)
-        {
-            HPvalue = Mon.Hp;
-            fullHp = Mon.Hp;
-            CDvalue = Mon.CDspeed;
-
-        }
-        CD.fillAmount = 0;
-    }
-
-    // Update is called once per frame
-    void FixedUpdate () {
         if (Mon == null)
         {
-            if (frog_Stagedata.instance.monster > 2)
+            if (frog_MonsterManager.instance.isBossComing)
                 Mon = GameObject.Find("King(Clone)").GetComponent<frog_Monster>();
             else
                 Mon = GameObject.Find("Mummy(Clone)").GetComponent<frog_Monster>();
 
             Start();
         }
-        else
+        HPvalue = Mon.Hp;
+        fullHp = Mon.Hp;
+        CD.fillAmount = 0;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate () {
+
+        if (HP.fillAmount > 0)
         {
 
             //Debug.Log(Mon);

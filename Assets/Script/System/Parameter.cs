@@ -3,6 +3,6 @@ using System.Collections;
 
 public static class Parameter {
 
-    public static int Mode = -1;
+    public static int Mode = 0;
 
 }

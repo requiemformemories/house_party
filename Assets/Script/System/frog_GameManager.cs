@@ -6,6 +6,7 @@ public class frog_GameManager : MonoBehaviour {
     public TweenAlpha Blood;
     public GameObject Fail;
     public GameObject Victory;
+    public GameObject BillingUI;
     public UISprite GetReady;
     public UISprite Go;
     public EJ_MainController Ctrl;
@@ -48,7 +49,7 @@ public class frog_GameManager : MonoBehaviour {
             instance = this;
         else if (instance != this)
         {
-            Debug.LogError("why is there two JUNK instance?!");
+            Debug.LogError("why is there two GameManager instance?!");
             Destroy(gameObject);
         }
     }
@@ -169,11 +170,13 @@ public class frog_GameManager : MonoBehaviour {
     void Loss()
     {
         Fail.SetActive(true);
-
     }
 
     public void Win()
     {
+        Ctrl.enabled = false;
+        Victory.GetComponent<TweenScale>().onFinished.Add
+            (new EventDelegate(() => { BillingUI.SetActive(true); }));
         Victory.SetActive(true);
     }
 

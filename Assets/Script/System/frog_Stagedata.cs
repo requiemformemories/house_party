@@ -9,6 +9,9 @@ public class frog_Stagedata : MonoBehaviour {
     public bool isFever;
     public int monster;
     public int Hited;
+    public float SpandTime { get { return Time.time - initialTime; } }
+    float initialTime;
+
     void Awake()
     {
         if (instance == null)
@@ -18,6 +21,8 @@ public class frog_Stagedata : MonoBehaviour {
             Debug.LogError("why is there two SoundManager instance?!");
             Destroy(gameObject);
         }
+
+        initialTime = Time.time;
     }
         // Use this for initialization
     void Start () {

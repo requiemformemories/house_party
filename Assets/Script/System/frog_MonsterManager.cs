@@ -5,6 +5,11 @@ public class frog_MonsterManager : MonoBehaviour {
     public static frog_MonsterManager instance;
     string M_name;
     public bool isNomonster;
+    public bool isBossComing = false;
+    int BossStage;
+    bool isArcadeMode;
+
+
     void Awake()
     {
         if (instance == null)
@@ -14,6 +19,8 @@ public class frog_MonsterManager : MonoBehaviour {
             Debug.LogError("why is there two frog_MonsterManager instance?!");
             Destroy(gameObject);
         }
+
+        SetStageMode(Parameter.Mode);
         isNomonster = true;
     }
 
@@ -25,12 +32,16 @@ public class frog_MonsterManager : MonoBehaviour {
         if (isNomonster)
         {
 
-            if (frog_Stagedata.instance.monster > 2)
+            if (frog_Stagedata.instance.monster == BossStage && isArcadeMode)
+            {
+                isBossComing = true;
                 M_name = "King";
-            else
+            }
+            else if (frog_Stagedata.instance.monster < BossStage || !isArcadeMode)
                 M_name = "Mummy";
+            else
+                return;
 
-            Debug.Log("怪物"+frog_Stagedata.instance.monster);
             GameObject monster = (GameObject)Instantiate(Resources.Load(M_name));
             monster.transform.parent = gameObject.transform;
             monster.transform.localPosition = Vector3.zero;
@@ -43,4 +54,34 @@ public class frog_MonsterManager : MonoBehaviour {
             isNomonster = false;
         }
 	}
+
+    void SetStageMode(int Mode)
+    {
+        switch (Mode)
+        {
+            case 0:
+                {
+                    BossStage = 5;
+                    isArcadeMode = true;
+                    break;
+                }
+            case 1:
+                {
+                    BossStage = 10;
+                    isArcadeMode = true;
+                    break;
+                }
+            case 2:
+                {
+                    BossStage = 99;
+                    isArcadeMode = false;
+                    break;
+                }
+            default:
+                {
+                    Debug.LogError("Stage parameter error, Check if Parameter.Mode is set or not.");
+                    break;
+                }
+        }
+    }
 }

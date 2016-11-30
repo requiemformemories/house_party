@@ -5,38 +5,106 @@ using UnityEngine.SceneManagement;
 
 
 public class LoadScene : MonoBehaviour {
-    public string SceneName;
-    public TweenAlpha BlackFade;
-    public TweenAlpha WhiteForHeaven;
-    public TweenAlpha TweenEffect;
-    public bool isHeavenBtn;
+    TweenAlpha FadeTA;
+    UISprite FadeSprite;
+    GameObject Fade;
+    public enum Scenes
+    {
+        MainMenu,
+        Normal,
+        Hard,
+        Endless,
+    }
 
+    public Scenes TargetScene;
+    public float DelayTime;
+    public TweenAlpha TweenEffect;
+    public bool UseWhiteFade;
+
+
+
+
+    void Awake()
+    {
+        Fade = (GameObject)Instantiate(Resources.Load("White"));
+        Fade.transform.position = Vector3.zero;
+        Fade.transform.parent = GameObject.Find("Camera").transform;
+        FadeSprite = Fade.GetComponent<UISprite>();
+        FadeTA = Fade.GetComponent<TweenAlpha>();
+    }
 
     public void OnClick()
     {
-        if (isHeavenBtn)
+        switch (TargetScene)
         {
-            WhiteForHeaven.onFinished.Add(new EventDelegate(() =>
+            case Scenes.MainMenu:
+                this.Invoke("GoMainMenu", DelayTime);
+                break;
+            case Scenes.Normal:
+                Parameter.Mode = 0;
+                this.Invoke("GoStage",DelayTime);
+                break;
+            case Scenes.Hard:
+                Parameter.Mode = 1;
+                this.Invoke("GoStage", DelayTime);
+                break;
+            case Scenes.Endless:
+                Parameter.Mode = 2;
+                this.Invoke("GoStage", DelayTime);
+                break;
+        }
+
+    }
+
+    void GoStage()
+    {
+        if (UseWhiteFade)
+        {
+            FadeTA.onFinished.Add(new EventDelegate(() =>
             {
-                SceneManager.LoadScene(SceneName);
+                SceneManager.LoadScene("Stage");
                 SoundManager.instance.VolumeFadeout(1, SoundManager.Channel.bgmSource1);
             }));
-            WhiteForHeaven.PlayForward();
-
+            FadeTA.PlayForward();
         }
         else
         {
-
-            BlackFade.onFinished.Add(new EventDelegate(() =>
+            FadeSprite.color = Color.black;
+            FadeTA.onFinished.Add(new EventDelegate(() =>
             {
-                SceneManager.LoadScene(SceneName);
-                SoundManager.instance.VolumeFadeout(1,SoundManager.Channel.bgmSource1);
-
+                SceneManager.LoadScene("Stage");
+                SoundManager.instance.VolumeFadeout(1, SoundManager.Channel.bgmSource1);
             }));
-            BlackFade.PlayForward();
-            if(TweenEffect != null)
-            TweenEffect.PlayForward();
+            FadeTA.PlayForward();
+            if (TweenEffect != null)
+                TweenEffect.PlayForward();
         }
+    }
+
+    void GoMainMenu()
+    {
+        if (UseWhiteFade)
+        {
+            FadeTA.onFinished.Add(new EventDelegate(() =>
+            {
+                SceneManager.LoadScene("FTScene");
+                SoundManager.instance.VolumeFadeout(1, SoundManager.Channel.bgmSource1);
+            }));
+            FadeTA.PlayForward();
+        }
+        else
+        {
+            FadeSprite.color = Color.black;
+            FadeTA.onFinished.Add(new EventDelegate(() =>
+            {
+                SceneManager.LoadScene("FTScene");
+                SoundManager.instance.VolumeFadeout(1, SoundManager.Channel.bgmSource1);
+            }));
+            FadeTA.PlayForward();
+            if (TweenEffect != null)
+                TweenEffect.PlayForward();
+        }
+
     }
 
 
