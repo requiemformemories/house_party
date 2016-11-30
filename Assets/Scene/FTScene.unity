@@ -100,6 +100,7 @@ GameObject:
   - 114: {fileID: 59922187}
   - 114: {fileID: 59922189}
   - 114: {fileID: 59922190}
+  - 114: {fileID: 59922191}
   m_Layer: 8
   m_Name: endless_btn
   m_TagString: Untagged
@@ -301,7 +302,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.2
   duration: 1
   steeperCurves: 0
   tweenGroup: 2
@@ -341,7 +342,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.2
   duration: 1
   steeperCurves: 0
   tweenGroup: 1
@@ -381,7 +382,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.2
+  delay: 2.4
   duration: 1
   steeperCurves: 0
   tweenGroup: 5
@@ -391,6 +392,21 @@ MonoBehaviour:
   from: {x: 1600, y: -200, z: 0}
   to: {x: 0, y: -200, z: 0}
   worldSpace: 0
+--- !u!114 &59922191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59922182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d68021ed64fb41b119dc062f95092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetScene: 3
+  DelayTime: 1.2
+  TweenEffect: {fileID: 0}
+  UseWhiteFade: 0
 --- !u!1 &150540839
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +517,7 @@ MonoBehaviour:
   tweenGroup: 1
   trigger: 0
   playDirection: 1
-  resetOnPlay: 0
+  resetOnPlay: 1
   resetIfDisabled: 0
   ifDisabledOnPlay: 0
   disableWhenFinished: 0
@@ -909,7 +925,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.2
+  delay: 2.6
   duration: 1
   steeperCurves: 0
   tweenGroup: 1
@@ -1002,7 +1018,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.4
   duration: 1
   steeperCurves: 0
   tweenGroup: 5
@@ -1042,7 +1058,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.4
   duration: 1
   steeperCurves: 0
   tweenGroup: 4
@@ -1082,7 +1098,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.4
   duration: 1
   steeperCurves: 0
   tweenGroup: 3
@@ -1183,7 +1199,7 @@ MonoBehaviour:
   tweenGroup: 5
   trigger: 0
   playDirection: 1
-  resetOnPlay: 0
+  resetOnPlay: 1
   resetIfDisabled: 0
   ifDisabledOnPlay: 0
   disableWhenFinished: 0
@@ -1427,6 +1443,7 @@ GameObject:
   - 114: {fileID: 1636102956}
   - 114: {fileID: 1636102960}
   - 65: {fileID: 1636102961}
+  - 114: {fileID: 1636102962}
   m_Layer: 8
   m_Name: hard_btn
   m_TagString: Untagged
@@ -1758,6 +1775,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 624, y: 224, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1636102962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1636102952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d68021ed64fb41b119dc062f95092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetScene: 2
+  DelayTime: 1.4
+  TweenEffect: {fileID: 0}
+  UseWhiteFade: 0
 --- !u!1 &1863914805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1806,7 @@ GameObject:
   - 114: {fileID: 1863914809}
   - 114: {fileID: 1863914814}
   - 65: {fileID: 1863914813}
+  - 114: {fileID: 1863914815}
   m_Layer: 8
   m_Name: normal_btn
   m_TagString: Untagged
@@ -1823,7 +1856,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.2
+  delay: 2.4
   duration: 1
   steeperCurves: 0
   tweenGroup: 1
@@ -1916,7 +1949,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.2
   duration: 1
   steeperCurves: 0
   tweenGroup: 5
@@ -1956,7 +1989,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.2
   duration: 1
   steeperCurves: 0
   tweenGroup: 4
@@ -1996,7 +2029,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
+  delay: 1.2
   duration: 1
   steeperCurves: 0
   tweenGroup: 3
@@ -2105,3 +2138,18 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
+--- !u!114 &1863914815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1863914805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d68021ed64fb41b119dc062f95092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetScene: 1
+  DelayTime: 1.4
+  TweenEffect: {fileID: 0}
+  UseWhiteFade: 0
