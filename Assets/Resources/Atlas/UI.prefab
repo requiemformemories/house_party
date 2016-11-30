@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Allwhite
-    x: 349
-    y: 11
+    x: 1856
+    y: 193
     width: 125
     height: 101
     borderLeft: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: hamberger
-    x: 806
-    y: 45
+    x: 3569
+    y: 1696
     width: 179
     height: 151
     borderLeft: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: one
-    x: 3569
-    y: 1696
+    x: 1856
+    y: 41
     width: 61
     height: 151
     borderLeft: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: opening_start
-    x: 349
-    y: 113
+    x: 0
+    y: 4
     width: 456
     height: 83
     borderLeft: 0
@@ -353,9 +353,22 @@ MonoBehaviour:
     paddingRight: 28
     paddingTop: 11
     paddingBottom: 6
+  - name: resultUI
+    x: 0
+    y: 88
+    width: 550
+    height: 108
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
   - name: shoot
-    x: 475
-    y: 49
+    x: 3902
+    y: 1743
     width: 168
     height: 63
     borderLeft: 0
@@ -367,7 +380,7 @@ MonoBehaviour:
     paddingTop: 32
     paddingBottom: 49
   - name: 'Slash '
-    x: 0
+    x: 551
     y: 48
     width: 348
     height: 148
@@ -393,8 +406,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: three
-    x: 1856
-    y: 294
+    x: 900
+    y: 43
     width: 93
     height: 153
     borderLeft: 0
@@ -407,7 +420,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: two
     x: 1856
-    y: 141
+    y: 295
     width: 93
     height: 152
     borderLeft: 0
