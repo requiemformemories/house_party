@@ -6,7 +6,7 @@ public class frog_MonsterManager : MonoBehaviour {
     string M_name;
     public bool isNomonster;
     public bool isBossComing = false;
-    int BossStage;
+    public int BossStage;
     bool isArcadeMode;
 
 
@@ -49,7 +49,7 @@ public class frog_MonsterManager : MonoBehaviour {
             gameObject.GetComponent<UITweener>().PlayForward();
             frog_Monster data = monster.GetComponent<frog_Monster>();
             data.Hp = 5000; // * frog_Stagedata.instance.level;
-            data.CDspeed = Random.Range(1f, 6f);
+            data.CDspeed = Random.Range(4f, 6f);
             data.atk = Mathf.FloorToInt(100 / data.CDspeed);
             isNomonster = false;
         }

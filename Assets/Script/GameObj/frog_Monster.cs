@@ -45,7 +45,7 @@ public class frog_Monster : MonoBehaviour {
                 TA.PlayForward();
                 isDead = true;
             }
-            if (frog_Stagedata.instance.monster == 6)
+            if (frog_Stagedata.instance.monster == frog_MonsterManager.instance.BossStage+1)
             {
                 frog_GameManager.instance.Win();
             }

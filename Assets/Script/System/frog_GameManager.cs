@@ -162,22 +162,37 @@ public class frog_GameManager : MonoBehaviour {
             Blood.to = (float)frog_Stagedata.instance.Hited / 10;
         if (frog_Stagedata.instance.Hited == 11)
         {
-            Loss();
+            if (Parameter.Mode == 2)
+                Loss(true);
+            else
+                Loss(false);
         }
 
     }
 
-    void Loss()
+    void Loss(bool isEndless)
     {
         Fail.SetActive(true);
+
+        if (isEndless)
+        {
+            Fail.GetComponent<TweenScale>().onFinished.Clear();
+            Fail.GetComponent<TweenScale>().onFinished.Add
+            (new EventDelegate(() => { OpenResultUI(); }));
+        }
     }
 
     public void Win()
     {
         Ctrl.enabled = false;
         Victory.GetComponent<TweenScale>().onFinished.Add
-            (new EventDelegate(() => { BillingUI.SetActive(true); }));
+            (new EventDelegate(() => { OpenResultUI(); }));
         Victory.SetActive(true);
+    }
+
+    void OpenResultUI()
+    {
+        BillingUI.SetActive(true);
     }
 
 }

@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697d68021ed64fb41b119dc062f95092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: 1
+  TargetScene: 0
   DelayTime: 0
   TweenEffect: {fileID: 608465468}
   UseWhiteFade: 0
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundResource: {fileID: 8300000, guid: 21d7356a286a7094aaf89997447ff7c8, type: 3}
   DelayTime: 0
-  audiotrack: 2
+  audiotrack: 4
 --- !u!1 &752962383
 GameObject:
   m_ObjectHideFlags: 0
