@@ -65,13 +65,13 @@ public class frog_GameManager : MonoBehaviour {
         if (TestMode)
         {
             if (Input.GetKey(KeyCode.UpArrow))
-                Ctrl.gameObject.transform.position += Vector3.up*Time.deltaTime * 8;
+                Ctrl.gameObject.transform.position += Vector3.up*Time.deltaTime * 6;
             if (Input.GetKey(KeyCode.DownArrow))
-                Ctrl.gameObject.transform.position += Vector3.down * Time.deltaTime * 8;
+                Ctrl.gameObject.transform.position += Vector3.down * Time.deltaTime * 6;
             if (Input.GetKey(KeyCode.LeftArrow))
-                Ctrl.gameObject.transform.position += Vector3.left * Time.deltaTime * 8;
+                Ctrl.gameObject.transform.position += Vector3.left * Time.deltaTime * 6;
             if (Input.GetKey(KeyCode.RightArrow))
-                Ctrl.gameObject.transform.position += Vector3.right * Time.deltaTime * 8;
+                Ctrl.gameObject.transform.position += Vector3.right * Time.deltaTime * 6;
         }
 
         isDown = Ctrl.isDown;
@@ -148,7 +148,7 @@ public class frog_GameManager : MonoBehaviour {
         {
             if (TestMode)
             {
-                if (Ctrl.gameObject.transform.localPosition.y < (-1600))
+                if (Ctrl.gameObject.transform.localPosition.y < (-4000))
                     Ctrl.isDown = false;
                 else
                     Ctrl.isDown = true;

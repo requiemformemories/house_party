@@ -4,8 +4,13 @@ using System.Collections;
 public class TEST : MonoBehaviour {
     public EJ_MainController Ctrl;
 
-    void Start()
+    void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StandSwich();
+        }
+        
     }
     public void StandSwich()
     {

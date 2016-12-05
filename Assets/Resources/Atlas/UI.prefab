@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 82ba309b6340d6e4687eb63c345dc4bd, type: 2}
   mSprites:
   - name: aim
-    x: 2002
-    y: 722
+    x: 1001
+    y: 2519
     width: 512
     height: 512
     borderLeft: 5
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Allwhite
-    x: 1856
-    y: 193
+    x: 3290
+    y: 3045
     width: 125
     height: 101
     borderLeft: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: arcade
     x: 0
-    y: 197
+    y: 2582
     width: 1000
     height: 449
     borderLeft: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: "back\u62F7\u8C9D"
-    x: 1001
-    y: 898
+    x: 0
+    y: 2132
     width: 1000
     height: 449
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: "blood_frame\u62F7\u8C9D"
-    x: 2515
-    y: 659
+    x: 2176
+    y: 3241
     width: 1113
     height: 154
     borderLeft: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 3
   - name: "blood\u62F7\u8C9D"
-    x: 2893
-    y: 587
+    x: 1514
+    y: 2960
     width: 1086
     height: 71
     borderLeft: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 74
     paddingBottom: 16
   - name: bow
-    x: 2515
-    y: 1023
+    x: 3003
+    y: 3435
     width: 983
     height: 211
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 38
     paddingBottom: 0
   - name: Cursor1
-    x: 3499
-    y: 1025
+    x: 3702
+    y: 3186
     width: 212
     height: 209
     borderLeft: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 56
     paddingBottom: 35
   - name: Cursor2
-    x: 2515
-    y: 41
+    x: 3290
+    y: 3147
     width: 226
     height: 248
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 43
     paddingBottom: 9
   - name: Cursor3
-    x: 3324
-    y: 1700
+    x: 1873
+    y: 3039
     width: 244
     height: 147
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 120
     paddingBottom: 33
   - name: "easy\u62F7\u8C9D"
-    x: 1001
-    y: 448
+    x: 3003
+    y: 3647
     width: 1000
     height: 449
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: endless
-    x: 2002
-    y: 1235
+    x: 0
+    y: 1682
     width: 1000
     height: 449
     borderLeft: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
     paddingBottom: 1
   - name: Energy
     x: 4004
-    y: 1457
+    y: 3869
     width: 53
     height: 227
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: exit
-    x: 1001
-    y: 18
+    x: 0
+    y: 802
     width: 854
     height: 429
     borderLeft: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: "fail\u62F7\u8C9D"
-    x: 3324
-    y: 1848
+    x: 2176
+    y: 3040
     width: 577
     height: 200
     borderLeft: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: GetReady
-    x: 2002
-    y: 1685
+    x: 0
+    y: 3032
     width: 1321
     height: 363
     borderLeft: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: hamberger
-    x: 3569
-    y: 1696
+    x: 3103
+    y: 3089
     width: 179
     height: 151
     borderLeft: 0
@@ -263,8 +263,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: "hands_beside_ears\u62F7\u8C9D"
-    x: 0
-    y: 1348
+    x: 1001
+    y: 3396
     width: 1000
     height: 700
     borderLeft: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: "hard\u62F7\u8C9D"
-    x: 3003
-    y: 1235
+    x: 0
+    y: 1232
     width: 1000
     height: 449
     borderLeft: 0
@@ -288,9 +288,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 1
+  - name: heavenDoor_2
+    x: 0
+    y: 284
+    width: 528
+    height: 517
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: "laydown2\u62F7\u8C9D"
     x: 0
-    y: 647
+    y: 3396
     width: 1000
     height: 700
     borderLeft: 0
@@ -302,8 +315,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: "laydown\u62F7\u8C9D"
-    x: 1001
-    y: 1348
+    x: 2002
+    y: 3396
     width: 1000
     height: 700
     borderLeft: 0
@@ -315,8 +328,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: muscle-icon-10
-    x: 2002
-    y: 210
+    x: 1001
+    y: 2007
     width: 511
     height: 511
     borderLeft: 0
@@ -328,8 +341,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: noodles
-    x: 3902
-    y: 1807
+    x: 3517
+    y: 3154
     width: 184
     height: 241
     borderLeft: 0
@@ -341,8 +354,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: one
-    x: 1856
-    y: 41
+    x: 4004
+    y: 3717
     width: 61
     height: 151
     borderLeft: 0
@@ -355,7 +368,7 @@ MonoBehaviour:
     paddingBottom: 1
   - name: opening_start
     x: 0
-    y: 4
+    y: 200
     width: 456
     height: 83
     borderLeft: 0
@@ -367,8 +380,8 @@ MonoBehaviour:
     paddingTop: 11
     paddingBottom: 6
   - name: resultUI
-    x: 0
-    y: 88
+    x: 1322
+    y: 3078
     width: 550
     height: 108
     borderLeft: 0
@@ -380,8 +393,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 2
   - name: shoot
-    x: 3902
-    y: 1743
+    x: 3517
+    y: 3090
     width: 168
     height: 63
     borderLeft: 0
@@ -393,8 +406,8 @@ MonoBehaviour:
     paddingTop: 32
     paddingBottom: 49
   - name: 'Slash '
-    x: 551
-    y: 48
+    x: 2754
+    y: 3092
     width: 348
     height: 148
     borderLeft: 0
@@ -406,8 +419,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: star
-    x: 2515
-    y: 290
+    x: 529
+    y: 433
     width: 377
     height: 368
     borderLeft: 4
@@ -419,8 +432,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: three
-    x: 900
-    y: 43
+    x: 3987
+    y: 3493
     width: 93
     height: 153
     borderLeft: 0
@@ -432,8 +445,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: two
-    x: 1856
-    y: 295
+    x: 3702
+    y: 3033
     width: 93
     height: 152
     borderLeft: 0
@@ -445,8 +458,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: "victory\u62F7\u8C9D"
-    x: 2515
-    y: 814
+    x: 1322
+    y: 3187
     width: 853
     height: 208
     borderLeft: 0
