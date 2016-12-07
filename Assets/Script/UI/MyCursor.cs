@@ -34,7 +34,7 @@ public class MyCursor : MonoBehaviour
 
     void Awake()
     {
-        countdown = 3f;
+        countdown = 1f;
         isPressedBtn = false;
     }
 

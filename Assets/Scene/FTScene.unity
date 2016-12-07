@@ -409,7 +409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetScene: 3
-  DelayTime: 1.2
+  DelayTime: 1.5
+  FadeTime: 1
   TweenEffect: {fileID: 0}
   UseWhiteFade: 0
 --- !u!114 &59922192
@@ -2027,7 +2028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetScene: 2
-  DelayTime: 1.4
+  DelayTime: 1.5
+  FadeTime: 1
   TweenEffect: {fileID: 0}
   UseWhiteFade: 0
 --- !u!114 &1636102963
@@ -2410,7 +2412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetScene: 1
-  DelayTime: 1.4
+  DelayTime: 1.5
+  FadeTime: 1
   TweenEffect: {fileID: 0}
   UseWhiteFade: 0
 --- !u!114 &1863914816

@@ -86,7 +86,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: 2
+  duration: 3.5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: 2
+  duration: 3.5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
@@ -213,7 +213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: duration
-      value: 2
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: animationCurve.m_Curve.Array.data[6].inSlope

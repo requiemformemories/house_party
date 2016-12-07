@@ -18,6 +18,7 @@ public class LoadScene : MonoBehaviour {
 
     public Scenes TargetScene;
     public float DelayTime;
+    public float FadeTime;
     public TweenAlpha TweenEffect;
     public bool UseWhiteFade;
 
@@ -31,6 +32,7 @@ public class LoadScene : MonoBehaviour {
         Fade.transform.parent = GameObject.Find("Camera").transform;
         FadeSprite = Fade.GetComponent<UISprite>();
         FadeTA = Fade.GetComponent<TweenAlpha>();
+        FadeTA.duration = FadeTime;
     }
 
     public void OnClick()
