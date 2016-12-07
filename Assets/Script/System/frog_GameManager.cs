@@ -148,7 +148,7 @@ public class frog_GameManager : MonoBehaviour {
         {
             if (TestMode)
             {
-                if (Ctrl.gameObject.transform.localPosition.y < (-4000))
+                if (Ctrl.gameObject.transform.localPosition.y < (-4500))
                     Ctrl.isDown = false;
                 else
                     Ctrl.isDown = true;

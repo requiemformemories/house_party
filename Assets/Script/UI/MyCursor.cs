@@ -19,6 +19,7 @@ public class MyCursor : MonoBehaviour
             NGUITools.AddChild(other.gameObject, (GameObject)Resources.Load("StarEffect"));
             isPressedBtn = true;
         }
+
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -33,7 +34,7 @@ public class MyCursor : MonoBehaviour
 
     void Awake()
     {
-        countdown = 1f;
+        countdown = 3f;
         isPressedBtn = false;
     }
 

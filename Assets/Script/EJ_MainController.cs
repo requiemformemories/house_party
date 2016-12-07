@@ -8,11 +8,11 @@ using System.Collections;
 
 public class EJ_MainController : MonoBehaviour {
 	//
-	private const float UpperBoundY = -0.95f;
+	private const float UpperBoundY = -0.3f;
 	//
 	private const float LowerBoundY = -8.50f; 
 	//
-	private const float f_isDown_threshold = 0.25f;
+	private const float f_isDown_threshold = 0.1f;
 	//
 	private const float speedup = 3.0f;
 	//
